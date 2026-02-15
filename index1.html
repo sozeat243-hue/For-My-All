@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For adel❤️</title>
+
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background: #fff0f5;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 80px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#yes {
+  background: #ff4d79;
+  color: white;
+}
+
+#no {
+  background: #ddd;
+}
+
+.heart {
+  position: absolute;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<h2>For my Adel ❤️</h2>
+<h1>Adel, will you be my All? 🧸</h1>
+
+<button id="yes">Yes 💖</button>
+<button id="no">No 😅</button>
+
+<script>
+document.getElementById("yes").onclick = function() {
+  alert("you are My All 💘");
+};
+
+document.getElementById("no").onmouseover = function() {
+  this.style.position = "absolute";
+  this.style.top = Math.random() * window.innerHeight + "px";
+  this.style.left = Math.random() * window.innerWidth + "px";
+};
+
+function heart() {
+  let h = document.createElement("div");
+  h.innerHTML = "❤️";
+  h.className = "heart";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.fontSize = Math.random() * 20 + 20 + "px";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 5000);
+}
+
+setInterval(heart, 500);
+</script>
+
+</body>
+</html>
